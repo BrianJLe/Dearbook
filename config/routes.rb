@@ -1,7 +1,7 @@
 SIBYearbook::Application.routes.draw do
   resources :cohorts
-
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
+  resources :users
 
   root to: 'home#index'
 

@@ -9,7 +9,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <% if user_signed_in? %>
+            <%= link_to "Yearbook", users_path, :class => 'navbar-brand page-scroll' %>
+            <% else %>
             <%= link_to "Yearbook", root_path, :class => 'navbar-brand page-scroll' %>
+            <% end %>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
