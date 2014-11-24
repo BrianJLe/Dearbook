@@ -1,4 +1,17 @@
 SIBYearbook::Application.routes.draw do
+
+
+  resources :codes do
+    get 'invite', :on => :collection
+  end
+
+  namespace :admin do 
+    get '', to: 'dashboard#index', as: '/' 
+  end 
+
+  resources :categories
+
+
   resources :cohorts
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users

@@ -11,8 +11,11 @@
   <%= f.label :quote %><br>
   <%= f.text_field :quote %><br>
 
-<%= f.label 'Add a picture' %><br>
-   <%= f.file_field :image %><br>
+  <%= f.label 'Select Track' %><br>
+  <%= f.select :cohort, options_for_select(%w(Product\ &\ Design Sales Technical\ Marketing Web\ Development), current_user.cohort), {:include_blank => true} %><br>
+
+  <%= f.label 'Add a picture`' %><br>
+  <%= f.file_field :image %><br>
 </div>
 <div class="actions">
   <%= f.submit "Update" %>

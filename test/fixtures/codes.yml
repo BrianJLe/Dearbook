@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  invite_code: MyString
+  description: MyString
+  cohort_id: 1
+
+two:
+  invite_code: MyString
+  description: MyString
+  cohort_id: 1

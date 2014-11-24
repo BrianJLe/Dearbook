@@ -1,3 +1,21 @@
 body { 
-    padding-top: 65px; 
+	padding-top: 65px; 
 }
+
+.wrath-content-box {
+	border-color: #e7e7e7;
+	background-color: #f8f8f8;
+	border-radius: 6px;
+	padding: 15px;
+}
+
+
+.CattoBorderRadius
+{
+	border-radius: 25px;
+}
+
+.margin {
+  margin-left:10px;
+  margin-right:10px;
+  }

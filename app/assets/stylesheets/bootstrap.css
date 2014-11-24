@@ -2895,7 +2895,7 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-info {
   color: #fff;
-  background-color: #F5D76E;
+  background-color: #4183D7;
   border-color: #fff;
 }
 .btn-info:hover,
@@ -4094,8 +4094,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #F5D76E;
-  border-color: #F5D76E;
+  background-color: #4183D7;
+  border-color: #4183D7;
 }
 .navbar-default .navbar-brand {
   color: #fff;

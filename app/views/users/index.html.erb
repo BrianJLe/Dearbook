@@ -1,4 +1,21 @@
-<% @users.each do |user| %>
-Name: <%= user.first_name + ' ' + user.last_name %><br>
-Quote: <%= user.quote.nil? ? 'No quote yet.' : user.quote %>
-<% end %>
+<div class="container">
+
+	<h1> The Fall 2014 Startup Institute Boston Class </h1>
+<div class = "row">
+	<%= link_to 'Students', users_path %> | <%= link_to 'Categories', categories_path %>
+</div>
+
+	<div class="row margin">
+
+		<% @users.each do |user| %>
+		<div class = "col-xs-6 col-md-4" style="padding-top: 15px;">
+			<div class="wrath-content-box">
+				<%= image_tag user.image_url(:thumb), :width => 200, :height => 200, :class => 'img-responsive CattoBorderRadius' %>
+				Name: <%= user.first_name + ' ' + user.last_name %><br>
+				Quote: <%= user.quote.nil? ? 'No quote yet.' : user.quote %><br>
+				Track: <%= user.cohort.nil? ? 'No track yet.' : user.cohort %><br>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>

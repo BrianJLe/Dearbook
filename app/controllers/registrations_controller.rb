@@ -1,5 +1,9 @@
 class RegistrationsController < Devise::RegistrationsController
-	def update
+ def after_update_path_for(resource)
+  users_path
+end
+
+def update
 
     # For Rails 3
     account_update_params = params[:user]
@@ -16,8 +20,8 @@ class RegistrationsController < Devise::RegistrationsController
       # Sign in the user bypassing validation in case their password changed
       sign_in @user, :bypass => true
       redirect_to after_update_path_for(@user)
-  else
-  	render "edit"
-  end
-end
+    else
+     render "edit"
+   end
+ end
 end

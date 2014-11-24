@@ -10,9 +10,9 @@
                 <span class="icon-bar"></span>
             </button>
             <% if user_signed_in? %>
-            <%= link_to "Yearbook", users_path, :class => 'navbar-brand page-scroll' %>
+            <%= link_to "Dearbook", users_path, :class => 'navbar-brand page-scroll' %>
             <% else %>
-            <%= link_to "Yearbook", root_path, :class => 'navbar-brand page-scroll' %>
+            <%= link_to "Dearbook", root_path, :class => 'navbar-brand page-scroll' %>
             <% end %>
         </div>
 
@@ -23,21 +23,21 @@
                     <a href="#page-top"></a>
                 </li>
                 <% if user_signed_in? %>
-               <li>
-                <%= link_to 'Edit profile', edit_user_registration_path, :class => 'page-scroll' %>
-            </li>
-            <li>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'page-scroll' %>
-            </li>
+                <li>
+                    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'page-scroll' %>
+                </li>
+                <li>
+                    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'page-scroll' %>
+                </li>
 
 
-            <% else %>
-            <li><%= link_to "Sign up", new_user_registration_path, :class => 'page-scroll'  %></li>
-            <li><%= link_to "Login", new_user_session_path, :class => 'page-scroll'  %></li>
-            <% end %>
-        </ul>
+                <% else %>
+                <li><%= link_to "Sign up", invite_codes_path, :class => 'page-scroll'  %></li>
+                <li><%= link_to "Login", new_user_session_path, :class => 'page-scroll'  %></li>
+                <% end %>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.navbar-collapse -->
-</div>
-<!-- /.container-fluid -->
+    <!-- /.container-fluid -->
 </nav>

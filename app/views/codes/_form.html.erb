@@ -1,0 +1,12 @@
+ You need an invite
+ <%= form_for(@code) do |f| %>
+
+ <div class="field">
+ 	<%= f.label :invite_code %> <br />
+ 	<%= f.text_field :invite_code, autofocus: true %>
+ </div>
+
+ <div class="actions">
+ 	<%= f.submit %>
+ </div>
+ <% end %>
