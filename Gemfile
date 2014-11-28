@@ -7,7 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'devise'
-gem "rmagick"
+gem 'rmagick', :require => 'RMagick'
 gem "carrierwave"
 gem "font-awesome-rails"
 

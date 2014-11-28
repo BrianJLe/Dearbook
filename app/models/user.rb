@@ -12,6 +12,4 @@ class User < ActiveRecord::Base
   has_many :codes
   mount_uploader :image, ImageUploader
 
-  validates_each :validate_code
-
 end

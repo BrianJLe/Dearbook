@@ -7,6 +7,7 @@ SIBYearbook::Application.routes.draw do
 
   namespace :admin do 
     get '', to: 'dashboard#index', as: '/' 
+    get :make_admin
   end 
 
   resources :categories

@@ -1,31 +1,31 @@
  <div class="container">
  	<div class="row">
-  You need an invite
-  <% if @error %>  
-  <div id="errorExplanation">   
-  	<ul>  
-  		<li><%= @error %></li>  
-  	</ul>  
-  </div>  
-  <% end %>  
-  <% if flash[:errors] && !flash[:errors].empty? then -%>
-  <div class="alert">  
-  	<a class="close" data-dismiss="alert">×</a> 
+ 		You need an invite
+ 		<% if @error %>  
+ 		<div id="errorExplanation">   
+ 			<ul>  
+ 				<li><%= @error %></li>  
+ 			</ul>  
+ 		</div>  
+ 		<% end %>  
+ 		<% if flash[:errors] && !flash[:errors].empty? then -%>
+ 		<div class="alert alert-success">
+ 			<button type="button" class="close" data-dismiss="alert">&times;</button>
 
-  	<%= flash[:errors] %>
-  </div>
-  <% end -%>
+ 			<%= flash[:errors] %>
+ 		</div>
+ 		<% end -%>
 
-  <%= form_for(@code) do |f| %>
+ 		<%= form_for(@code) do |f| %>
 
-  <div class="field">
-  	<%= f.label :invite_code %> <br />
-  	<%= f.text_field :invite_code, autofocus: true %>
-  </div>
+ 		<div class="field">
+ 			<%= f.label :invite_code %> <br />
+ 			<%= f.text_field :invite_code, autofocus: true %>
+ 		</div>
 
-  <div class="actions">
-  	<%= f.submit 'Submit' %>
-  </div>
-  <% end %>
-</div>
-</div>
+ 		<div class="actions">
+ 			<%= f.submit 'Submit' %>
+ 		</div>
+ 		<% end %>
+ 	</div>
+ </div>
